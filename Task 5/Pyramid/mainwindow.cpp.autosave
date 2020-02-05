@@ -37,14 +37,13 @@ void MainWindow::set_image(QPixmap pic){
 
 
 void MainWindow::BuildPyramid(QString path){
-
-            QPixmap pic(path);                                   //size for compression
-            int koef_com = 2;
+            QPixmap pic(path);                                   
+            int koef_com = 2;                       
             // QSize size = pic.size();
              do{
                   set_image(pic);
-                  pic = pic.scaled(pic.size()/=koef_com, Qt::KeepAspectRatioByExpanding);
-             }while(pic.size().width() > 2 && pic.size().height() > 2);
+                  pic = pic.scaled(pic.size()/=koef_com, Qt::KeepAspectRatioByExpanding);   
+             }while(pic.size().width() > 4 && pic.size().height() > 4);
 
 }
 

@@ -23,6 +23,9 @@ private slots:
 private:
     QGraphicsScene *scene;
     Ui::MainWindow *ui;
+    void set_image(QString path);
+    void set_image(QPixmap pic);
+    void BuildPyramid(QString path);
 };
 
 #endif // MAINWINDOW_H
